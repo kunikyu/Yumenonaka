@@ -51,7 +51,6 @@ class gamesystem:
   
   def searchTalk(self,talk,text):
     for t in text:
-      print(talk,t)
       if re.search(t,talk):
         return True
     else:
