@@ -16,16 +16,17 @@ class gamesystem:
     self.scene = []
 
     self.scene.append(scene('夢ノ中へようこそ\nボクは「ユメ」だよ',Os=1))
-    self.scene.append(scene('ここはボクの世界．ボクがここのアルジだ．ボクがゼッタイだよ',Os=2))
-    self.scene.append(scene('あそぶトモダチがいないんだ．いっしょにあそぼうよ．',Tlist=[r'いいよ',r'^うん',r'良いよ',r'おっけー',r'オッケー',r'おｋ'],Flist=[r'いや[だ]?',r'嫌[だ]?',r'遊びたくない',r''],Ts=3,Fs=9))
-    self.scene.append(scene('それじゃあ......\n「カクレンボ」をしよう',Flist=[r'いや[だ]?',r'嫌[だ]?',r'おにぎり'],Os=4))
-    self.scene.append(scene('じゃあ，キミがかくれて',Flist=[r'いや[だ]?',r'嫌[だ]?',r'おにがいい',r'鬼がいい'],Os=5,))
-    self.scene.append(scene('1,2,3,...,10 もういいかーい！',Tlist=[r''],Os=6))
+    self.scene.append(scene('ここはボクの世界．ボクがここのアルジだ．ボクがゼッタイのばしょだ',Os=2))
+    self.scene.append(scene('あそぶトモダチがいないんだ．いっしょにあそぼうよ．',Tlist=[r'いいよ',r'^うん',r'良いよ',r'おっけー',r'オッケー',r'おｋ',r'^$'],Flist=[r'いや[だ]?',r'嫌[だ]?',r'遊びたくない'],Ts=3,Fs=8,Os=-1))
+    self.scene.append(scene('それじゃあ......\n「カクレンボ」をしよう',Flist=[r'いや[だ]?',r'嫌[だ]?',r'おにぎり'],Os=4,Fs=-1))
+    self.scene.append(scene('じゃあ，キミがかくれて',Flist=[r'いや[だ]?',r'嫌[だ]?',r'おにがいい',r'鬼がいい'],Os=5,Fs=-1))
+    self.scene.append(scene('1,2,3,...,10 もういいかーい！',Tlist=[r''],Os=6,Ts=-1))
     self.scene.append(scene('みっけー！声出したらだめだよ',Os=7))
     self.scene.append(scene('いっかいきゅうけいにしよう．',Os=8))
-    self.scene.append(scene('なにかたべたいんだけど，きみごはんつくれる？',Tlist=[r'つくれる',r'できる',r'うん'],Ts=9))
-    self.scene.append(scene('つくれるの！じゃあ作ってよ．\nたのしみだなぁ．'))
-    self.scene.append(scene(''))
+    self.scene.append(scene('じゃあ...\nなにかたべたいんだけど，きみごはんつくれる？',Tlist=[r'つくれる',r'できる',r'うん'],Ts=9))
+    self.scene.append(scene('つくれるの！じゃあ作ってよ．\nたのしみだなぁ．',Os=-1))
+    
+    self.scene.append(scene('--製作途中につきここで終了--'))
     
     for i,s in enumerate(self.scene):
       s.Myindex = i
